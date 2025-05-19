@@ -38,8 +38,9 @@ const ArticlesTable: React.FC<ArticlesTableProps> = ({
       <Table className="w-full min-w-[600px]">
         <TableHeader className="sticky top-0 z-10 bg-muted">
           <TableRow className="bg-gray-50">
-            <TableHead className="w-12">
+            <TableHead className="w-4">
               <Checkbox
+               
                 checked={isAllSelected}
                 onCheckedChange={onSelectAll}
                 aria-label="Select all"
@@ -105,7 +106,7 @@ const ArticlesTable: React.FC<ArticlesTableProps> = ({
               <TableCell className="text-right min-w-[80px]">{article.words}</TableCell>
               <TableCell className="text-right whitespace-nowrap min-w-[110px]">{article.createdOn}</TableCell>
               <TableCell className="text-center min-w-[80px]">
-                <Button variant="outline" size="sm" className="text-white bg-blue-500 hover:bg-blue-50 hover:text-blue-500 ">
+                <Button variant="outline" size="sm" className="text-white bg-blue-500 hover:bg-blue-100 hover:text-blue-500 ">
                   View
                 </Button>
               </TableCell>

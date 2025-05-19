@@ -18,9 +18,9 @@ const PaginationControls: React.FC<PaginationControlsProps> = ({ pageSize, onPag
   return (
     <div className="mt-4 flex flex-col sm:flex-row items-center justify-between text-sm gap-3 sm:gap-0">
       <div className="flex items-center gap-2 flex-wrap justify-center sm:justify-start">
-        <span>Total {total} Article Titles | Show</span>
+        <span>Total <b> {total} </b>  Articles | Show</span>
         <Select value={pageSize} onValueChange={onPageSizeChange}>
-          <SelectTrigger className="w-20">
+          <SelectTrigger className="w-20 max-h-8" style={{ border: '1px solid black' }}>
             <SelectValue />
           </SelectTrigger>
           <SelectContent>

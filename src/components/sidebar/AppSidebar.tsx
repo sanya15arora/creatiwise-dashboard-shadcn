@@ -24,264 +24,142 @@ import {
 
 const data = {
   user: {
-    name: "Sanya",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
+    name: "Sanya Arora",
+    email: "sanya@example.com",
+    avatar: "/avatars/sanya.jpg",
   },
   platforms: [
     {
-      name: "amazon.com",
-      avatar: "/avatars/shadcn.jpg",
-      plan: "Yearly",
+      name: "Amazon",
+      avatar: "/avatars/amazon.png",
+      plan: "Business",
     },
     {
-      name: "google.com",
-      avatar: "AudioWaveform",
+      name: "Google",
+      avatar: "/avatars/google.png",
       plan: "Professional",
     },
     {
-      name: "facebook.com",
-      avatar: "/avatars/shadcn.jpg",
+      name: "Facebook",
+      avatar: "/avatars/facebook.png",
       plan: "Free",
     },
   ],
   navMain: [
     {
       title: "Articles",
-      url: "#",
+      url: "/dashboard/articles",
       icon: Newspaper,
       isActive: true,
       items: [
-        {
-          title: "Create Article",
-          url: "/dashboard/articles/create",
-        },
-        {
-          title: "Generated Articles",
-          url: "/dashboard/articles/generate",
-        },
-        {
-          title: "Keyword Projects",
-          url: "#",
-        },
-        {
-          title: "AI Keyword to Articles",
-          url: "#",
-        },
-        {
-          title: "Steal Competitor Keyword",
-          url: "#",
-        },
-        {
-          title: "Import Keyword from GSC",
-          url: "#",
-        },
-        {
-          title: "Article Settings",
-          url: "#",
-        },
+        { title: "Create Article", url: "/dashboard/articles/create" },
+        { title: "Generated Articles", url: "/dashboard/articles/generate" },
+        { title: "Keyword Projects", url: "/dashboard/articles/keyword-project" },
+        { title: "AI Keyword to Articles", url: "/dashboard/articles/ai-keyword" },
+        { title: "Article Settings", url: "/dashboard/articles/settings" },
       ],
     },
     {
       title: "Auto Blog",
-      url: "#",
+      url: "/dashboard/auto-blog",
       icon: Bot,
       items: [
-        {
-          title: "Genesis",
-          url: "#",
-        },
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
-        },
+        { title: "Genesis Bot", url: "/dashboard/auto-blog/genesis" },
+        { title: "Content Explorer", url: "/dashboard/auto-blog/explorer" },
+        { title: "Quantum Writer", url: "/dashboard/auto-blog/quantum" },
       ],
     },
     {
       title: "Internal Links",
-      url: "#",
+      url: "/dashboard/internal-links",
       icon: Link,
       items: [
-        {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
-        },
+        { title: "Introduction", url: "/dashboard/internal-links/intro" },
+        { title: "Get Started", url: "/dashboard/internal-links/start" },
+        { title: "Tutorials", url: "/dashboard/internal-links/tutorials" },
+        { title: "Changelog", url: "/dashboard/internal-links/changelog" },
       ],
     },
     {
       title: "Free Backlinks",
-      url: "#",
+      url: "/dashboard/backlinks",
       icon: Settings2,
       items: [
-        {
-          title: "General",
-          url: "#",
-        },
-        {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
-        },
+        { title: "Overview", url: "/dashboard/backlinks/overview" },
+        { title: "Manage Team", url: "/dashboard/backlinks/team" },
+        { title: "Billing", url: "/dashboard/backlinks/billing" },
+        { title: "Usage Limits", url: "/dashboard/backlinks/limits" },
       ],
     },
     {
       title: "Integration",
-      url: "#",
+      url: "/dashboard/integration",
       icon: Plug,
       items: [
-        {
-          title: "General",
-          url: "#",
-        },
-        {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
-        },
+        { title: "API Keys", url: "/dashboard/integration/api" },
+        { title: "Webhooks", url: "/dashboard/integration/webhooks" },
+        { title: "Third-Party Tools", url: "/dashboard/integration/tools" },
       ],
     },
     {
       title: "Subscriptions",
-      url: "#",
+      url: "/dashboard/subscriptions",
       icon: Star,
       items: [
-        {
-          title: "General",
-          url: "#",
-        },
-        {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
-        },
+        { title: "Current Plan", url: "/dashboard/subscriptions/current" },
+        { title: "Team Members", url: "/dashboard/subscriptions/team" },
+        { title: "Billing History", url: "/dashboard/subscriptions/billing" },
       ],
     },
     {
       title: "Affiliate Program",
-      url: "#",
+      url: "/dashboard/affiliate",
       icon: CircleDollarSign,
       items: [
-        {
-          title: "General",
-          url: "#",
-        },
-        {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
-        },
+        { title: "Overview", url: "/dashboard/affiliate/overview" },
+        { title: "Referrals", url: "/dashboard/affiliate/referrals" },
+        { title: "Payouts", url: "/dashboard/affiliate/payouts" },
       ],
     },
     {
       title: "Help Center",
-      url: "#",
+      url: "/dashboard/help",
       icon: Info,
       items: [
-        {
-          title: "Genesis",
-          url: "#",
-        },
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
-        },
+        { title: "Documentation", url: "/dashboard/help/docs" },
+        { title: "FAQs", url: "/dashboard/help/faqs" },
+        { title: "Contact Support", url: "/dashboard/help/contact" },
       ],
     },
     {
       title: "Updates",
-      url: "#",
+      url: "/dashboard/updates",
       icon: Bell,
       items: [
-        {
-          title: "Genesis",
-          url: "#",
-        },
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
-        },
+        { title: "Latest Features", url: "/dashboard/updates/features" },
+        { title: "Release Notes", url: "/dashboard/updates/notes" },
+        { title: "Roadmap", url: "/dashboard/updates/roadmap" },
       ],
     },
     {
       title: "Live Chat Support",
-      url: "#",
+      url: "/dashboard/support/chat",
       icon: Bot,
       items: [
-        {
-          title: "Genesis",
-          url: "#",
-        },
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
-        },
+        { title: "Technical", url: "/dashboard/support/chat/tech" },
+        { title: "Billing", url: "/dashboard/support/chat/billing" },
+        { title: "General", url: "/dashboard/support/chat/general" },
       ],
     },
   ],
   profile: [
     {
-      name: "Profile",
-      url: "#",
+      name: "Profile Settings",
+      url: "/dashboard/profile",
       icon: User,
     },
   ],
-}
+};
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
@@ -297,3 +175,4 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     </Sidebar>
   )
 }
+

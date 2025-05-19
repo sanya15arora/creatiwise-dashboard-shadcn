@@ -108,10 +108,10 @@ const DataTable: React.FC<DataTableProps> = ({ articles }) => {
         pageSize={pageSize}
         onPageSizeChange={(newSize) => {
           setPageSize(newSize);
-          setCurrentPage(1); // reset page on page size change
+          setCurrentPage(1);
         } }
         currentPage={currentPage} 
-        total={paginatedArticles.length}      />
+        total={paginatedArticles.length}/>
     </div>
   );
 };

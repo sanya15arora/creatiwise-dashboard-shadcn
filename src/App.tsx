@@ -1,9 +1,23 @@
-import type { FC } from 'react';
+import type { FC, JSX } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import GenerateArticles from './pages/Dashboard/Article/GenerateArticle';
 import DashboardLayout from './pages/Dashboard/DashboardLayout';
 import CreateArticle from './pages/Dashboard/Article/CreateArticle';
+import KeywordProject from './pages/Dashboard/Article/KeywordProject';
+import AIKeyword from './pages/Dashboard/Article/AIKeyword';
+import NotFound from './pages/NotFound';
 
+interface RouteConfig {
+  path: string;
+  element: JSX.Element;
+}
+
+const articleRoutes: RouteConfig[] = [
+  { path: "create", element: <CreateArticle /> },
+  { path: "generate", element: <GenerateArticles /> },
+  { path: "keyword-project", element: <KeywordProject /> },
+  { path: "ai-keyword", element: <AIKeyword /> },
+];
 
 const App: FC = () => {
   return (
@@ -12,9 +26,12 @@ const App: FC = () => {
         <Route path="/" element={<Navigate to="/dashboard/articles/generate" replace />} />
         <Route path="/dashboard" element={<DashboardLayout />}>
           <Route index element={<Navigate to="articles/generate" replace />} />
-          <Route path="articles/create" element={<CreateArticle />} />
-          <Route path="articles/generate" element={<GenerateArticles />} />
+          {articleRoutes.map(({ path, element }) => (
+            <Route key={path} path={`articles/${path}`} element={element} />
+          ))}
+          <Route path="*" element={<NotFound />} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
