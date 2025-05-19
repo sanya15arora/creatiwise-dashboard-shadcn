@@ -25,10 +25,12 @@ const App: FC = () => {
       <Routes>
         <Route path="/" element={<Navigate to="/dashboard/articles/generate" replace />} />
         <Route path="/dashboard" element={<DashboardLayout />}>
-          <Route index element={<Navigate to="articles/generate" replace />} />
-          {articleRoutes.map(({ path, element }) => (
-            <Route key={path} path={`articles/${path}`} element={element} />
-          ))}
+          <Route path="articles">
+            <Route index element={<Navigate to="generate" replace />} />
+            {articleRoutes.map(({ path, element }) => (
+              <Route key={path} path={path} element={element} />
+            ))}
+          </Route>
           <Route path="*" element={<NotFound />} />
         </Route>
         <Route path="*" element={<NotFound />} />
