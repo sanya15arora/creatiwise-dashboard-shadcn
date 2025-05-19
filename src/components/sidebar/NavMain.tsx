@@ -70,7 +70,7 @@ export function NavMain({ items, profile }: {
         ))}
         <Separator />
         <SidebarMenuItem>
-          {profile.map((profile) => (<SidebarMenuButton>
+          {profile.map((profile, index) => (<SidebarMenuButton key={index}>
             {profile.icon && <profile.icon />}
             <span>{profile.name}</span>
           </SidebarMenuButton>))}
