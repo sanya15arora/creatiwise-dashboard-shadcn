@@ -35,7 +35,6 @@ Article Dashboard is a comprehensive web application designed for content creato
 1. Clone the repository:
    ```bash
    git clone https://github.com/sanya15arora/creatiwise-dashboard-shadcn.git
-   cd creatiwise-dashboard-shadcn
    ```
 
 2. Install dependencies:
