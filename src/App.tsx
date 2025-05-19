@@ -25,6 +25,8 @@ const App: FC = () => {
       <Routes>
         <Route path="/" element={<Navigate to="/dashboard/articles/generate" replace />} />
         <Route path="/dashboard" element={<DashboardLayout />}>
+        <Route index element={<Navigate to="articles/generate" replace />} />
+
           <Route path="articles">
             <Route index element={<Navigate to="generate" replace />} />
             {articleRoutes.map(({ path, element }) => (
