@@ -1,54 +1,107 @@
-# React + TypeScript + Vite
+# Article Dashboard App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React dashboard application for management , created with Vite and styled with Tailwind CSS.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Article Dashboard is a comprehensive web application designed for content creators, editors, and publishers who need to manage a large collection of articles efficiently. It features a sleek dashboard layout with nested routes for creating, generating, editing, and managing articles.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Article Listed**: Articles Listed Generated, Published, Scheduled and more
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
+- **Fast Development**: Powered by Vite for quick iteration
+- **Type Safety**: Built with TypeScript for robust code
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Technologies Used
+
+- **React 18**: Modern UI library for building interactive interfaces
+- **Vite**: Next-generation frontend tooling for fast development
+- **React Router**: Declarative routing for React applications
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development
+- **TypeScript**: Static type definitions for JavaScript
+- **Shadcn UI**: Beautifully designed components built with Radix UI and Tailwind
+- **Lucide Icons**: Beautiful & consistent icon set
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js v16.0 or newer
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sanya15arora/creatiwise-dashboard-shadcn.git
+   cd creatiwise-dashboard-shadcn
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open your browser and navigate to:
+   ```
+   http://localhost:5173
+   ```
+
+## Project Structure
+
+```
+creatiwise-dashboard-shadcn/
+├── public/              # Static files
+├── src/
+│   ├── components/      # Reusable UI components
+│   ├── pages/           # Application pages
+│   ├── hooks/           # Custom React hooks
+│   ├── lib/             # Utility functions
+│   ├── types/           # TypeScript type definitions
+│   ├── App.tsx          # Main App component
+│   └── main.tsx         # Application entry point
+├── .gitignore           # Git ignore file
+├── index.html           # HTML entry point
+├── package.json         # Project dependencies
+├── tailwind.config.js   # Tailwind CSS configuration
+├── tsconfig.json        # TypeScript configuration
+└── vite.config.ts       # Vite configuration
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Build for Production
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm run build
+# or
+yarn build
 ```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- UI design inspired by modern dashboard trends
+- Icons provided by [Lucide](https://lucide.dev/)
+- Components powered by [Shadcn UI](https://ui.shadcn.com/)
+
+## Contact
+
+Project Link: [https://github.com/sanya15arora/creatiwise-dashboard-shadcn](https://github.com/sanya15arora/creatiwise-dashboard-shadcn)
+
+---
+
+Made with ❤️ by Sanya Arora
